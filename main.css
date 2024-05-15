@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Main container */
+.repos-container {
+  background-color: #f0f0f0; /* Light gray */
+  padding: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Form section */
+.repos-container .form {
+  background-color: #f0f0f0; /* Light gray */
+  display: flex;
+  gap: 15px;
+}
+
+.repos-container .form input {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  height: 54px;
+}
+
+.repos-container .form input:focus {
+  outline: solid 2px #8bc3aa; /* Darker shade of teal */
+}
+
+.repos-container .form .button {
+  background-color: #009688; /* Teal */
+  padding: 10px 20px;
+  border-radius: 5px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.repos-container .form .button:hover {
+      background-color: #01887a; /* Teal */
+
+}
+
+/* Results section */
+.repos-container .results {
+  background-color: #ffffff; /* White */
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.repos-container .results .repo-box {
+  padding: 10px;
+  background-color: #f0f0f0; /* Light gray */
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold
+}
+
+.repos-container .results .repo-box:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.repos-container .results .repo-box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.repos-container .results .repo-box > span {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  
+}
+
+.repos-container .results .repo-box > span a,
+.repos-container .results .repo-box > span span {
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.repos-container .results .repo-box > span a {
+  text-decoration: none;
+  background-color: #005a96; /* Orange */
+}
+
+.repos-container .results .repo-box > span span {
+  background-color: #525161; /* Green */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .repos-container {
+    width: calc(100% - 5px);
+  }
+  .repos-container .form {
+    flex-direction: column;
+  }
+  .repos-container .form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .repos-container .form .button {
+    width: 100%;
+  }
+  .repos-container .results .repo-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
